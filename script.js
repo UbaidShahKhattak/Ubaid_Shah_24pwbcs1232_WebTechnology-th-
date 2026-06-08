@@ -1,12 +1,12 @@
 // =============================================
 //   EVENT HORIZON – script.js
-//   All DOM manipulation, validation, filtering
+//      All DOM manipulation, validation, filtering
 // =============================================
 
 // ---- Set current year in footer ----
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// ---- Predefined initial events ----
+//    ---- Predefined initial events ----
 let events = [
   {
     id: Date.now() + 1,
