@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Horizon – Event Management</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">◎</span>
+        <h1>Event Horizon</h1>
+      </div>
+      <p class="tagline">Your events, perfectly managed.</p>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- SEARCH BAR -->
+    <section class="search-section">
+      <div class="search-wrapper">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" placeholder="Search events by name or date…" />
+      </div>
+    </section>
+
+    <!-- ADD EVENT FORM -->
+    <section class="form-section">
+      <h2 class="section-title">Add New Event</h2>
+      <form id="eventForm" novalidate>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="eventName">Event Name</label>
+            <input type="text" id="eventName" placeholder="e.g. Tech Summit 2025" />
+          </div>
+          <div class="form-group">
+            <label for="eventDate">Event Date</label>
+            <input type="date" id="eventDate" />
+          </div>
+          <div class="form-group full-width">
+            <label for="eventDesc">Event Description</label>
+            <textarea id="eventDesc" rows="3" placeholder="Describe the event…"></textarea>
+          </div>
+        </div>
+        <div id="formWarning" class="form-warning hidden">⚠ Please fill in all fields before adding an event.</div>
+        <button type="submit" class="btn-add">+ Add Event</button>
+      </form>
+    </section>
+
+    <!-- EVENTS LIST -->
+    <section class="events-section">
+      <h2 class="section-title">Upcoming Events <span id="eventCount" class="badge">0</span></h2>
+      <div id="eventList" class="event-grid">
+        <!-- Events rendered by JS -->
+      </div>
+      <p id="noEvents" class="no-events hidden">No events found. Add one above!</p>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Designed by <strong>Ubaid Shah</strong> &copy; <span id="year"></span> | Event Horizon</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
